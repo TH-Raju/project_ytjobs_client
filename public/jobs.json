@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Frontend Developer",
+        "company": "YDJobs",
+        "job-type": "Remote",
+        "salary": 100,
+        "description": "About At YDJobs, we do not offer you just a job, but a career in the highly sought-after risk Management field. We are one of the business leaders in the risk market. We work with a vision to make the world more prosperous, trustworthy, and safe. Deloitte’s clients, primarily based outside of India, are large, complex organizations that constantly evolve and innovate to build better products and services. In the process, they encounter various risks and the work we do to help them address these risks is increasingly important to their success—and to the strength of the economy and public security. By joining us, you will get to work with diverse teams of professionals who design, manage, and implement risk-centric solutions across a variety of domains. In the process, you will gain exposure to the risk-centric challenges faced in today’s world by organizations across a range of industry sectors and become subject matter experts in those areas",
+        "requirements": " Experience 5 years to 8 years Proven work experience as a UI/UX Designer or similar role Developing and conceptualizing a comprehensive UI/UX design strategy for the brand.  Producing high-quality UX design solutions through wireframes, visual and graphic designs, flow diagrams, storyboards, site maps, and prototypes. Designing UI elements and tools such as navigation menus, search boxes, tabs, and widgets. Knowledge of wireframe tools (e.g. Wireframe.cc and InVision) Up-to-date knowledge of design software tools Advanced level of English "
+    },
+    {
+        "title": "Full stack Developer",
+        "company": "UST",
+        "job-type": "On-site",
+        "salary": 200,
+        "description": "Born digital, UST transforms lives through the power of technology. We walk alongside our clients and partners, embedding innovation and agility into everything they do. We help them create transformative experiences and human-centered solutions for a better world. UST is a mission-driven group of over 29,000+ practical problem solvers and creative thinkers in over 30+ countries. Our entrepreneurial teams are empowered to innovate, act nimbly, and create a lasting and sustainable impact for our clients, their customers, and the communities in which we live",
+        "requirements": " Experience 1 years to 3 years Proven work experience as a UI/UX Designer or similar role Developing and conceptualizing a comprehensive UI/UX design strategy for the brand.  Producing high-quality UX design solutions through wireframes, visual and graphic designs, flow diagrams, storyboards, site maps, and prototypes. Designing UI elements and tools such as navigation menus, search boxes, tabs, and widgets. Knowledge of wireframe tools (e.g. Wireframe.cc and InVision) Up-to-date knowledge of design software tools Advanced level of English "
+    },
+    {
+        "title": "MERN stack Developer",
+        "company": "Pothon",
+        "job-type": "Hybrid",
+        "salary": 300,
+        "description": "For the past 20 years, we have powered many Digital Experiences for the Fortune 500. Since 1999, we have grown from a few people to more than 4000 team members across the globe that are engaged in various Digital Modernization. For a brief 1 minute video about us, you can check https://youtu.be/uJWBWQZEA6o.",
+        "requirements": " Bachelor's/master’s degree in computer field with experience in Node & React JS. Candidate should have more hands-on experience with Nodejs Weightage - 70% - Nodejs & 30 % - React Strong proficiency with JavaScript Knowledge of Node.js and frameworks and libraries such as Express, Async, Lodash, socket, etc Good understanding of server-side templating languages such as Jade, EJS, etc depending on your technology stack Basic understanding of front-end technologies, such as HTML5, and CSS3 Familiarity with RESTful APIs."
+    }
+]
