@@ -10,6 +10,7 @@ const JobPost = () => {
         const description = form.description.value;
         const requirements = form.requirements.value;
         const salary = form.salary.value;
+        const email = form.email.value;
         const jobtype = form.jobtype.value;
 
         const job = {
@@ -18,6 +19,7 @@ const JobPost = () => {
             description,
             requirements,
             salary,
+            email,
             jobtype
         }
         // console.log(job)
@@ -47,6 +49,8 @@ const JobPost = () => {
                 <div className=''>
                     <span className="mb-1">Company Name</span>
                     <input name="company" type="text" placeholder="Company Name" className="input input-bordered w-full" />
+                    <span className="mb-1">Email</span>
+                    <input name="email" type="email" placeholder="Email" className="input input-bordered w-full" />
                     <span className="mb-1">Job title</span>
                     <input name="title" type="text" placeholder="Designation" className="input input-bordered w-full" />
                     <span className="mb-1">Job Description</span>

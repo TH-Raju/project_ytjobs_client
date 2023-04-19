@@ -1,11 +1,14 @@
 import Contact from "../Components/Contact";
-import Banner from "../Components/Home/Banner";
+import { Faq } from "../Components/Faq";
 import Home from "../Components/Home/Home";
-import Job from "../Components/Jobs/Job";
 import JobPost from "../Components/Jobs/JobPost";
 import Jobs from "../Components/Jobs/Jobs";
+import Login from "../Components/LogSign/Login";
+import SignUp from "../Components/LogSign/SignUp";
+import Errorpage from "../Components/Shared/Errorpage";
 import JobsLayout from "../Layout/JobsLayout";
 import Main from "../Layout/Main";
+import PrivateRoute from "../Route/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/jobs',
-                element: <JobsLayout></JobsLayout>,
+                element: <PrivateRoute><JobsLayout></JobsLayout></PrivateRoute>,
                 children: [
 
                     {
@@ -32,7 +35,19 @@ const router = createBrowserRouter([
             },
             {
                 path: '/jobpost',
-                element: <JobPost></JobPost>
+                element: <PrivateRoute><JobPost></JobPost></PrivateRoute>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <SignUp></SignUp>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
             },
 
             {
@@ -40,6 +55,10 @@ const router = createBrowserRouter([
                 element: <Contact></Contact>
             }
         ]
+    },
+    {
+        path: "*",
+        element: <Errorpage></Errorpage>
     }
 ]);
 

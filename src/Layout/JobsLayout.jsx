@@ -5,6 +5,23 @@ import { Link, Outlet } from 'react-router-dom';
 const JobsLayout = () => {
     const [jobs, setJobs] = useState([]);
 
+    const serachBtn = event => {
+        event.preventDefault();
+        const form = event.target;
+        const search = form.search.value;
+        const title = form.title.value;
+        const location = form.location.value;
+        const salary = form.salary.value;
+
+        const data = {
+            search,
+            title,
+            location,
+            salary,
+        }
+        console.log(data);
+        form.reset();
+    }
 
     useEffect(() => {
         fetch('http://localhost:5000/jobs')
@@ -17,29 +34,34 @@ const JobsLayout = () => {
             <div className="drawer-content flex flex-col w-5/6 mx-auto">
                 {/* <!-- Page content here --> */}
                 <div>
-                    <input type="text" placeholder="Search" className="input input-bordered w-full max-w-xs" />
-                    <select className="select w-full max-w-xs mx-5">
-                        <option disabled selected>Job Title</option>
-                        {/* <option>Remote</option> */}
-                        {
-                            jobs.map(job => <option key={job._id}>{job.title}</option>)
-                        }
-                    </select>
-                    <select className="select w-full max-w-xs">
-                        <option disabled selected>Location</option>
-                        <option>Remote</option>
-                        <option>Hybrid</option>
-                        <option>On-site</option>
-                    </select>
-                    <select className="select w-full max-w-xs">
-                        <option disabled selected>Salary</option>
-                        <option>100</option>
-                        <option>200</option>
-                        <option>300</option>
+                    <form action="" onSubmit={serachBtn}>
+                        <input type="text" name="search" placeholder="Search" className="input input-bordered w-full max-w-xs" />
+                        <select name="title" className="select w-full max-w-xs mx-5">
+                            <option disabled selected>Job Title</option>
+                            {/* <option>Remote</option> */}
+                            {
+                                jobs.map(job => <option key={job._id}>{job.title}</option>)
+                            }
+                        </select>
+                        <select name="location" className="select w-full max-w-xs">
+                            <option disabled selected>Location</option>
+                            <option>Remote</option>
+                            <option>Hybrid</option>
+                            <option>On-site</option>
+                        </select>
+                        <select name="salary" className="select w-full max-w-xs">
+                            <option disabled selected>Salary</option>
+                            <option>100</option>
+                            <option>200</option>
+                            <option>300</option>
 
-                    </select>
+                        </select>
+                        {/* <button className="btn btn-primary mx-4">Search</button> */}
+                        <input type="submit" value="Search" className='btn btn-primary mx-4' />
+
+                    </form>
                 </div>
-                <h1 className='text-center'>Find Your Dream Job</h1>
+                <h1 className='text-center'>Select Your Dream Job</h1>
                 <Outlet></Outlet>
 
             </div>

@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
 const Jobs = () => {
     // const [jobs, setJobs] = useState([])
+    const { user } = useContext(AuthContext);
     const job = useLoaderData();
     const { title, company, salary, description, requirements } = job;
 
@@ -35,7 +37,7 @@ const Jobs = () => {
                             </label>
                             <label className="block">
                                 <span className="mb-1">Email address</span>
-                                <input type="email" placeholder="your@gmail.com" className="block w-full p-3 rounded-md shadow-sm focus:ring focus:ring-opacity-75 " />
+                                <input type="email" defaultValue={user.email} className="block w-full p-3 rounded-md shadow-sm focus:ring focus:ring-opacity-75 " />
                             </label>
                             <label className="block">
                                 <span className="mb-1">Cover letter</span>
@@ -44,6 +46,7 @@ const Jobs = () => {
                             <span className="">Resume/CV</span>
                             <input type="file" className="file-input file-input-bordered w-full max-w-xs" />
                             {/* <button type="button" className="self-center px-8 py-3 text-lg focus:ring hover:ring focus:ring-opacity-75 bg-primary text-white w-full rounded-xl   hover:bg-blue-700">Submit</button> */}
+
 
 
                             <div className="modal-action">
