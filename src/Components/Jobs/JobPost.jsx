@@ -24,7 +24,7 @@ const JobPost = () => {
         }
         // console.log(job)
 
-        fetch('http://localhost:5000/jobs/', {
+        fetch('https://ytjobs-server.vercel.app/jobs/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
